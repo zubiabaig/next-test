@@ -20,3 +20,14 @@ test('locate paragraph element', async ({page})=>{
   const playerActivities = page.locator('.activities-with-players').getByRole('paragraph')
   await expect(playerActivities).toContainText(['Learn', 'Speak', 'Compete','Write'])
 })
+
+test('locate list items as child elements', async({page})=>{
+  await page.goto('/players')
+
+  const parentElement = page.locator('.all-players')
+
+  const allPlayersList = parentElement.getByRole('listitem')
+
+  await expect(allPlayersList).toHaveCount(4)
+  await expect(allPlayersList).toContainText(['A','B','C','D'])
+})
