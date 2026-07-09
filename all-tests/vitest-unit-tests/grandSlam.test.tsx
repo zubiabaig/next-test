@@ -1,7 +1,6 @@
-import { describe }e }e }enode:test
+import GrandSlam from "@/app/grandSlam/page";
 import { render, screen, within } from '@testing-library/react';
-import { expect,ttest est est vitesttt
-import@GrandSlam@/app/g@/app/grandSlam/pageam/pageam/pageam/pageam/pageam/pageam/pageam/page";
+import { describe, expect, test } from "vitest";
 
 render(<GrandSlam/>)
 
@@ -38,4 +37,4 @@ test('has the tennis keywords', { skip: true}, ()=>{
 
 // alternatively, you can indicate the options argument using the dot syntax to specify a skipped test
 test.skip('this test case will be skipped', ()=> {})
-describe
+describe.skip('this test suite will be skipped', ()=>{})
